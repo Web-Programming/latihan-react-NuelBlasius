@@ -1,30 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import PersonList from './components/PersonList';
+import PersonAdd from './components/PersonAdd';
+import PersonRemove from './components/PersonRemove';
+import PersonUpdate from './components/PersonUpdate';
 import './App.css';
-import Hello from './Hello';
-import Product from './Product';
-import Registrasi from './Registrasi';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-        <Hello/>
-        <Hello nama = "Valen" pesan = ":v"/>
-        <Product/>
-        <Registrasi/>
-      </header>
+      <h1>User Management</h1>
+      <div className="form-container">
+        <h2>Add User</h2>
+        <PersonAdd />
+      </div>
+      <div className="list-container">
+        <h2>User List</h2>
+        <PersonList />
+      </div>
+      <div className="form-container">
+        <h2>Remove User</h2>
+        <PersonRemove />
+      </div>
+      <div className="form-container">
+        <h2>Update User</h2>
+        <PersonUpdate />
+      </div>
     </div>
   );
 }
